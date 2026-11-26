@@ -24,6 +24,7 @@ export default buildConfig({
   db: sqliteAdapter({
     client: {
       url: process.env.DATABASE_URI || 'file:./local.db',
+      authToken: process.env.DATABASE_AUTH_TOKEN,
     },
   }),
   admin: {
