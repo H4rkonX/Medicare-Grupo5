@@ -12,6 +12,8 @@ import {
   UsersIcon,
 } from '@/components/Icons'
 
+export const dynamic = 'force-dynamic'
+
 export default async function HomePage() {
   const payload = await getPayloadClient()
   const specialties = await payload.find({

@@ -22,6 +22,7 @@ const dirname = path.dirname(filename)
 export default buildConfig({
   secret: process.env.PAYLOAD_SECRET || 'local-dev-secret-key-12345',
   db: sqliteAdapter({
+    push: true,
     client: {
       url: process.env.DATABASE_URI || 'file:./local.db',
       authToken: process.env.DATABASE_AUTH_TOKEN,
